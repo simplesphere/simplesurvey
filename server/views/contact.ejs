@@ -1,0 +1,52 @@
+<% include partials/header.ejs %>
+  <!-- Include Custom Page Header -->
+  <% include partials/page-header.ejs %>
+
+  <!-- Start Main Content -->
+    <section id="contact" class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8">
+            <!-- Start Contact Form  -->
+            <form class="contact-form" action="post">
+              <input name="name" id="name" type="text" placeholder="Name">
+              <input name="mail" id="mail" type="text" placeholder="Your e-mail">
+              <input name="website" id="website" type="text" placeholder="Website">
+              <textarea name="comment" id="comment" placeholder="Message"></textarea>
+              <button type="submit" name="contact-submit" id="submit_contact">Submit</button>
+            </form>
+            <!-- End Contact Form  -->
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <h4>Where to find us</h4>
+              <p>I can be reached at any time through the contact phone or personally on the address below</p>
+              <!-- Start Contact Details  -->
+              <ul class="contact-list">
+                <li><i class="fa fa-map-marker"></i>253, Johnson Street, Barrie</li>
+                <li><i class="fa fa-phone"></i>+ 1 705 734 8944</li>
+                <li><i class="fa fa-envelope-o"></i><a href="mailto:contact@simplesphere.net.com">contact@simplesphere.net</a></li>
+              </ul>
+              <!-- End Contact Details  -->
+            </div>
+            <hr>
+            <div class="social">
+              <h4>Socialize!</h4>
+              <!-- Start  Social Links -->
+              <ul class="social">
+                <li class="facebook"> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                <li class="twitter"> <a href="#"> <i class="fa fa-twitter"></i> </a> </li>
+                <li class="google-plus"> <a href="#"> <i class="fa fa-google-plus"></i> </a> </li>
+                <li class="linkedin"> <a href="#"> <i class="fa fa-linkedin"></i> </a> </li>
+                <li class="youtube"> <a href="#"> <i class="fa fa-youtube-play"></i> </a> </li>
+              </ul>
+              <!-- End Social Links  -->
+            </div>        
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Main Content -->
+
+<% include partials/footer.ejs %>
