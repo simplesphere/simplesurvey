@@ -1,0 +1,1 @@
+{"version":3,"sources":["config/db.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,GAAG;IACb,KAAK,EAAC,oEAAoE;CAC7E,CAAC","file":"config/db.js","sourcesContent":["module.exports = {\n    'url':'mongodb://anoop:password1234@ds015720.mlab.com:15720/simple-survey'\n};"],"sourceRoot":"/source/"}

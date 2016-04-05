@@ -1,0 +1,23 @@
+{
+  "name": "simple-survey",
+  "description": "A simple survey app using MEAN stack using passportjs for authentication.": "",
+  "authors": [
+    "simplesphere"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/Scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0"
+  }
+}
