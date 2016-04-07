@@ -25,6 +25,18 @@
             <li><a href="/stats">Stats</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/contact">Contact Us</a></li>
+         <% } else if(title == "Stats") { %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/surveys">Surveys</a></li>
+            <li class="active"><a href="/stats">Stats</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+         <% } else if(title == "Contact") { %>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/surveys">Surveys</a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
          <% } %>
          <% if(displayName) { %>
             <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= displayName %></li>
