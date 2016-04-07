@@ -1,9 +1,9 @@
 <% include ../partials/header.ejs %>
 <% include ../partials/navbar.ejs %>
 <main class="container">
-    <h1>Users</h1>
+    <h1>Survey Listing</h1>
 
-    <a href="/users/add">Add a New User</a>
+    <a href="/users/add">Add a new survey</a>
 
     <ul class="list-group">
         <% for (var i = 0; i < users.length; i++) { %>
@@ -12,8 +12,6 @@
                 <a href="/users/<%= users[i]._id %>" title="Edit User">
                     <%= users[i].username %>
                 </a>
-                <br />
-                password: <%= users[i].password %>
                 <br />
                 email: <%= users[i].email %>
                 <br />
