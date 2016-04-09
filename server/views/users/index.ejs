@@ -1,27 +1,51 @@
 <% include ../partials/header.ejs %>
 <% include ../partials/navbar.ejs %>
-<main class="container">
-    <h1>Survey Listing</h1>
 
-    <a href="/users/add">Add a new survey</a>
+  <section id="top-banner" class="section bg-intro intro-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 page-title">
+          <h2>Welcome to your dashboard, <%= displayName %></h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <ul class="list-group">
-        <% for (var i = 0; i < users.length; i++) { %>
-            <li class="list-group-item">
-                username: 
-                <a href="/users/<%= users[i]._id %>" title="Edit User">
-                    <%= users[i].username %>
-                </a>
-                <br />
-                email: <%= users[i].email %>
-                <br />
-                Display Name: <%= users[i].displayName %>
-                <br />
-                Created: <%= users[i].created.toDateString() %>
-                <br />
-                Updated: <%= users[i].updated.toDateString() %>
-            </li>
-        <% } %>
-    </ul>
-</main>
+  <section class="section section" id="dashboard-listing">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">          
+            <h2>Survey Listing</h2>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="btn btn-default btn-blue">Add New Survey</a>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Survey Title</th>
+                <th>Date Created</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td>@</td>
+              </tr>
+            </tbody> 
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <% include ../partials/footer.ejs %>

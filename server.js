@@ -5,7 +5,7 @@
  */
 
 var app = require('./server/app');
-var debug = require('debug')('COMP2068-MongoDemo:server');
+var debug = require('debug')('http');
 var http = require('http');
 
 /**

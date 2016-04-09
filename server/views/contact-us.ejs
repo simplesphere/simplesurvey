@@ -1,13 +1,27 @@
 <% include partials/header.ejs %>
-    <% include partials/navbar.ejs %>
-        <main class="container">
+<% include partials/navbar.ejs %>
+
+  <section id="top-banner" class="section bg-intro intro-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 page-title">
+          <h2>Get in Touch</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="main-content" class="section">
+    <div class="container">
+      <div class="row">
+          
+          <div class="col-md-8">
             <% if (messages) { %>
                 <div class="alert alert-success alert-dismissable" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <%= messages %></div>
             <% } %>
-            <h1><%= title %> Page</h1>
-            <form method="post">
+            <form method="post" class="login-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name:" required>
@@ -26,5 +40,10 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-blue">Send</button>
             </form>
-        </main>
-        <% include partials/footer.ejs %>
+
+          </div>
+        </div>
+    </div>
+  </section>
+
+<% include partials/footer.ejs %>

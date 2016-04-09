@@ -1,0 +1,44 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+<main class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <h2>Survey Listing</h2>
+        </div>
+        <div class="col-md-3">
+            <a href="#" class="btn btn-default btn-blue">Add New Survey</a>
+        </div>
+    </div>
+    
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Survey Title</h4>
+        </div>
+        <div class="col-md-4">
+            <h4>Date Created</h4>
+        </div>
+        <div class="col-md-4">
+            <h4>Author</h4>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+
+    <hr/>
+
+    <ul class="list-group">
+        <% for (var i = 0; i < surveys.length; i++) { %>
+            <li class="list-group-item">
+                username: 
+                <a href="/surveys/<%= surveys[i]._id %>" title="Edit User">
+                    <%= surveys[i].surveyTitle %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+</main>
+<% include ../partials/footer.ejs %>

@@ -14,32 +14,18 @@ router.get('/', (req: express.Request, res: express.Response, next: any) => {
         displayName: req.user ? req.user.displayName : '' });
 });
 
-/* GET product page. */
-router.get('/surveys', (req: express.Request, res: express.Response, next: any) => {
-    res.render('index', { 
-        title: 'Surveys',
-        displayName: req.user ? req.user.displayName : ''});
-});
-
-/* GET services page. */
-router.get('/stats', (req: express.Request, res: express.Response, next: any) => {
-    res.render('index', { 
-        title: 'Stats',
-        displayName: req.user ? req.user.displayName : '' });
-});
-
 /* GET about page. */
-router.get('/about', (req: express.Request, res: express.Response, next: any) => {
-    res.render('index', { 
-        title: 'About',
+router.get('/about-us', (req: express.Request, res: express.Response, next: any) => {
+    res.render('about-us', { 
+        title: 'About Us',
         displayName: req.user ? req.user.displayName : '' });
 });
 
 /* GET contact page. */
-router.get('/contact', (req: express.Request, res: express.Response, next: any) => {
-    req.flash('successmessage', 'Thank You. Your message has been sent.');
-    req.flash('errormessage','An Error has occurred.');
-    res.render('contact', { 
+router.get('/contact-us', (req: express.Request, res: express.Response, next: any) => {
+    req.flash('successmessage', 'Your message has been submitted. We will get back to you shortly!');
+    req.flash('errormessage','Oops, something went wrong!');
+    res.render('contact-us', { 
         title: 'Contact', 
         messages: null,
         displayName: req.user ? req.user.displayName : '' });

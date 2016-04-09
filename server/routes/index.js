@@ -12,29 +12,17 @@ router.get('/', function (req, res, next) {
         title: 'Home',
         displayName: req.user ? req.user.displayName : '' });
 });
-/* GET product page. */
-router.get('/surveys', function (req, res, next) {
-    res.render('index', {
-        title: 'Surveys',
-        displayName: req.user ? req.user.displayName : '' });
-});
-/* GET services page. */
-router.get('/stats', function (req, res, next) {
-    res.render('index', {
-        title: 'Stats',
-        displayName: req.user ? req.user.displayName : '' });
-});
 /* GET about page. */
-router.get('/about', function (req, res, next) {
-    res.render('index', {
-        title: 'About',
+router.get('/about-us', function (req, res, next) {
+    res.render('about-us', {
+        title: 'About Us',
         displayName: req.user ? req.user.displayName : '' });
 });
 /* GET contact page. */
-router.get('/contact', function (req, res, next) {
-    req.flash('successmessage', 'Thank You. Your message has been sent.');
-    req.flash('errormessage', 'An Error has occurred.');
-    res.render('contact', {
+router.get('/contact-us', function (req, res, next) {
+    req.flash('successmessage', 'Your message has been submitted. We will get back to you shortly!');
+    req.flash('errormessage', 'Oops, something went wrong!');
+    res.render('contact-us', {
         title: 'Contact',
         messages: null,
         displayName: req.user ? req.user.displayName : '' });
